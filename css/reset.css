@@ -1,0 +1,44 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: normal;
+}
+
+/* Font */
+/* Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* Gmarket Sans (EN) */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Variables */
+:root {
+  --main-color: #142F5F;
+  --crimson: #FE5358;
+  --cloudy-gray: #F9F9F9;
+  --light-gray: #999;
+  --dark-gray: #333;
+  --normal-txt-color: #555;
+
+  --sub-title-size: 28px;
+  --sub-title-desc-size: 18px;
+}

@@ -7,6 +7,7 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
   <!-- Custom JS & CSS -->
+  <script defer src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <title>Manwol</title>
 </head>
@@ -48,7 +49,7 @@
       <img src="/images/01_main_slider (2).jpg" alt="main slide1">
       <img src="/images/01_main_slider (3).jpg" alt="main slide1">
       <img src="/images/01_main_slider (4).jpg" alt="main slide1">
-      <img src="/images/01_main_slider (5).jpg" alt="main slide1">
+      <!-- <img src="/images/01_main_slider (5).jpg" alt="main slide1"> -->
       <!-- <img src="/images/01_main_slider (1).jpg" alt="main slide1"> -->
       <!-- <img src="/images/01_main_slider (6).jpg" alt="main slide1"> -->
     </div>
@@ -78,70 +79,74 @@
           <p class="sub-tit-detail">나를 위한 만월회</p>
         </div>
         <div class="forMeAndYou-slide">
-          <!-- for me -->
-          <div class="forMe-slide-items">
-            <div class="forMe-slide-item">
-              <div class="item-img">
-                <img src="./images/02_forme_slider (1).png" alt="">
+          <div class="forMeAndYou-slide-display">
+            <div class="forMeAndYou-slide-inner">
+              <!-- for me -->
+              <div class="for-slide-items first show">
+                <div class="for-slide-item">
+                  <div class="item-img">
+                    <img src="./images/02_forme_slider (1).png" alt="">
+                  </div>
+                  <div class="item-desc">
+                    <span>첫 구매라면?</span>
+                    <p>500원에 첫 구매!</p>
+                  </div>
+                </div>
+                <div class="for-slide-item">
+                  <div class="item-img">
+                    <img src="./images/02_forme_slider (2).png" alt="">
+                  </div>
+                  <div class="item-desc">
+                    <span>오래 두고 마시고 싶다면</span>
+                    <p>한 포씩 간편하게!</p>
+                  </div>
+                </div>
+                <div class="for-slide-item">
+                  <div class="item-img">
+                    <img src="./images/02_forme_slider (3).png" alt="">
+                  </div>
+                  <div class="item-desc">
+                    <span>내 마음대로 양 조절</span>
+                    <p>원하는 양만큼 콸콸콸!</p>
+                  </div>
+                </div>
               </div>
-              <div class="item-desc">
-                <span>첫 구매라면?</span>
-                <p>500원에 첫 구매!</p>
-              </div>
-            </div>
-            <div class="forMe-slide-item">
-              <div class="item-img">
-                <img src="./images/02_forme_slider (2).png" alt="">
-              </div>
-              <div class="item-desc">
-                <span>오래 두고 마시고 싶다면</span>
-                <p>한 포씩 간편하게!</p>
-              </div>
-            </div>
-            <div class="forMe-slide-item">
-              <div class="item-img">
-                <img src="./images/02_forme_slider (3).png" alt="">
-              </div>
-              <div class="item-desc">
-                <span>내 마음대로 양 조절</span>
-                <p>원하는 양만큼 콸콸콸!</p>
-              </div>
-            </div>
-          </div>
-          <!-- for you -->
-          <div class="forYou-slide-items">
-            <div class="forYou-slider-item">
-              <div class="item-img">
-                <img src="./images/02_foryou_slider (1).jpg" alt="">
-              </div>
-              <div class="item-desc">
-                <span>깜짝 비밀 선물</span>
-                <p>소매넣기 선물</p>
-              </div>
-            </div>
-            <div class="forYou-slide-item">
-              <div class="item-img">
-                <img src="./images/02_foryou_slider (2).jpg" alt="">
-              </div>
-              <div class="item-desc">
-                <span>고급스러운 선물</span>
-                <p>5종 선물세트</p>
-              </div>
-            </div>
-            <div class="forYou-slide-item">
-              <div class="item-img">
-                <img src="./images/02_foryou_slider (3).jpg" alt="">
-              </div>
-              <div class="item-desc">
-                <span>다같이 함께</span>
-                <p>단체 주문</p>
+              <!-- for you -->
+              <div class="for-slide-items second">
+                <div class="for-slide-item">
+                  <div class="item-img">
+                    <img src="./images/02_foryou_slider (1).jpg" alt="">
+                  </div>
+                  <div class="item-desc">
+                    <span>깜짝 비밀 선물</span>
+                    <p>소매넣기 선물</p>
+                  </div>
+                </div>
+                <div class="for-slide-item">
+                  <div class="item-img">
+                    <img src="./images/02_foryou_slider (2).jpg" alt="">
+                  </div>
+                  <div class="item-desc">
+                    <span>고급스러운 선물</span>
+                    <p>5종 선물세트</p>
+                  </div>
+                </div>
+                <div class="for-slide-item">
+                  <div class="item-img">
+                    <img src="./images/02_foryou_slider (3).jpg" alt="">
+                  </div>
+                  <div class="item-desc">
+                    <span>다같이 함께</span>
+                    <p>단체 주문</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- arrow -->
-          <div class="slide-arrow">
-            <img src="./images/arrow-left.png" alt="" class="arrowLeft">
-            <img src="./images/arrow-right.png" alt="" class="arrowRight">
+          <div class="for-slide-arrow">
+            <img class="arrowLeft" src="./images/arrow-left.png" alt="" >
+            <img class="arrowRight" src="./images/arrow-right.png" alt="">
           </div>
           <!-- pagers -->
           <div class="pagers">
@@ -242,7 +247,7 @@
         <div class="review-items">
           <div class="review-item">
             <div class="review-img">
-              <img src="05_review_img (1).png" alt="">
+              <img src="" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">
@@ -264,7 +269,7 @@
           </div>
           <div class="review-item">
             <div class="review-img">
-              <img src="05_review_img (1).png" alt="">
+              <img src="" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">
@@ -286,7 +291,7 @@
           </div>
           <div class="review-item">
             <div class="review-img">
-              <img src="05_review_img (1).png" alt="">
+              <img src="" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">
@@ -308,7 +313,7 @@
           </div>
           <div class="review-item">
             <div class="review-img">
-              <img src="05_review_img (1).png" alt="">
+              <img src="" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">

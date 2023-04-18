@@ -4,49 +4,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  <!-- Custom JS & CSS -->
   <link rel="stylesheet" href="./css/style.css">
   <title>Manwol</title>
 </head>
 <body>
   <!-- Main Navigation -->
   <nav id="main-nav">
-    <div class="nav-left">
-      <div class="nav-logo">
-        <img src="./images/00_logo.png" alt="만월회 로고" width="200">
+    <div class="main-nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo">
+          <img src="./images/00_logo.png" alt="만월회 로고">
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#">첫 구매라면?</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">REVIEW</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">연남스토어 OPEN</a></li>
+        </ul>
       </div>
-      <ul class="nav-menu">
-        <li><a href="#">첫 구매라면?</a></li>
-        <li><a href="#">SHOP</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">REVIEW</a></li>
-        <li><a href="#">고객센터</a></li>
-        <li><a href="#">연남스토어 OPEN</a></li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <ul>
-        <li><a href="#">LOGIN</a></li>
-        <li><a href="#">JOIN</a></li>
-        <li>
-          <a href="#">
-            <img src="./images/00_shopping_bag.png" alt="">
+      <div class="nav-right">
+        <ul>
+          <li><a href="#">LOGIN</a></li>
+          <li><a href="#">JOIN</a></li>
+          <li class="shop-bag">
+            <a href="#">
+              <img src="./images/00_shopping_bag.png" alt="">
+            </a>
             <em data-count="3"></em>
-          </a>
-      </li>
-      </ul>
+        </li>
+        </ul>
+      </div>
     </div>
   </nav>
   <section id="inner">
     <!-- Main Slide -->
     <div class="main-slide">
-      <img src="/images/01_main_slider (1).jpg" alt="main slide1">
+      <img class="show" src="/images/01_main_slider (1).jpg" alt="main slide1">
+      <img src="/images/01_main_slider (2).jpg" alt="main slide1">
+      <img src="/images/01_main_slider (3).jpg" alt="main slide1">
+      <img src="/images/01_main_slider (4).jpg" alt="main slide1">
+      <img src="/images/01_main_slider (5).jpg" alt="main slide1">
+      <!-- <img src="/images/01_main_slider (1).jpg" alt="main slide1"> -->
+      <!-- <img src="/images/01_main_slider (6).jpg" alt="main slide1"> -->
     </div>
     <!-- Article : Intro -->
     <article id="intro-content">
       <div class="intro-inner">
         <div class="intro-desc">
           <div class="intro-logo">
-            <img src="./images/00_logo.png" alt="" width="500">
+            <img src="./images/00_logo.png" alt="" width="450">
           </div>
           <p class="intro-tit">보름달 뜨는 천재들의 모임</p>
           <p class="intro-detail">
@@ -67,8 +78,8 @@
           <p class="sub-tit-detail">나를 위한 만월회</p>
         </div>
         <div class="forMeAndYou-slide">
+          <!-- for me -->
           <div class="forMe-slide-items">
-            <!-- for me -->
             <div class="forMe-slide-item">
               <div class="item-img">
                 <img src="./images/02_forme_slider (1).png" alt="">
@@ -127,6 +138,16 @@
               </div>
             </div>
           </div>
+          <!-- arrow -->
+          <div class="slide-arrow">
+            <img src="./images/arrow-left.png" alt="" class="arrowLeft">
+            <img src="./images/arrow-right.png" alt="" class="arrowRight">
+          </div>
+          <!-- pagers -->
+          <div class="pagers">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+          </div>
         </div>
       </div>
     </article>
@@ -135,6 +156,7 @@
       <div class="about-inner">
         <div class="about-slide-box">
           <div class="about-slide-items">
+            <!-- 만월회란? -->
             <div class="about-slide-item">
               <div class="about-img">
                 <img src="./images/03_about (1).png" alt="만월회란? 이미지">
@@ -145,6 +167,42 @@
                   만월회는 어떤 브랜드고,<br />
                   어떤 비전과 목표를 가지고 있는지<br />
                   궁금하신가요?
+                </p>
+                <div class="moreBtn1">
+                  <p>More View</p>
+                  <i></i>
+                </div>
+              </div>
+            </div>
+            <!-- 조각달 카페 -->
+            <div class="about-slide-item">
+              <div class="about-img">
+                <img src="./images/03_about (1).png" alt="만월회란? 이미지">
+              </div>
+              <div class="about-desc">
+                <h3>조각달 카페</h3>
+                <p>
+                  만월회 원액을 사용하여<br />
+                  새로운 가치를 만드는 카페들<br />
+                  전국에 700여 개의 조각달이 존재합니다.
+                </p>
+                <div class="moreBtn1">
+                  <p>More View</p>
+                  <i></i>
+                </div>
+              </div>
+            </div>
+            <!-- Rcruit -->
+            <div class="about-slide-item">
+              <div class="about-img">
+                <img src="./images/03_about (1).png" alt="만월회란? 이미지">
+              </div>
+              <div class="about-desc">
+                <h3>Rcruit</h3>
+                <p>
+                  보름달 뜨는 날 천재들과 함께<br />
+                  일하고 싶다면 만월회에 지원해보세요.<br />
+                  당신도 몰랐던 천재성을 발견할 수도 있으니!
                 </p>
                 <div class="moreBtn1">
                   <p>More View</p>
@@ -181,9 +239,100 @@
           <h2 class="sub-tit">REVIEW</h2>
           <div class="sub-tit-bar"></div>
         </div>
+        <div class="review-items">
+          <div class="review-item">
+            <div class="review-img">
+              <img src="05_review_img (1).png" alt="">
+            </div>
+            <div class="review-desc">
+              <div class="stars-id">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <span>|</span>
+                <em class="id">wjdgusd*****님</em>
+              </div>
+              <p class="goods-name">콜드브루(40ml*2스틱)</p>
+              <p class="review-txt">
+                학교에서 공부하면서 순삭... 콜드브루 향이 지이인짜 좋아요!! 코끝에 맴도는 것이 넘 완벽합니당 ㅠ_ㅠ
+              </p>
+            </div>
+          </div>
+          <div class="review-item">
+            <div class="review-img">
+              <img src="05_review_img (1).png" alt="">
+            </div>
+            <div class="review-desc">
+              <div class="stars-id">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <span>|</span>
+                <em class="id">wjdgusd*****님</em>
+              </div>
+              <p class="goods-name">[옵션]밀크티/수량1box(40ml*2스틱)</p>
+              <p class="review-txt">
+                밀크티 정말 좋아해서 기대하고 시켰는데 지금까지 먹어본 밀크티 중에 손에 꼽게 맛있어요. 많이 달지 않아서 너무 좋아요. 맘같아선 두개 타 먹고 싶었는데 참았습니다 ㅎㅎ...
+              </p>
+            </div>
+          </div>
+          <div class="review-item">
+            <div class="review-img">
+              <img src="05_review_img (1).png" alt="">
+            </div>
+            <div class="review-desc">
+              <div class="stars-id">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <span>|</span>
+                <em class="id">wjdgusd*****님</em>
+              </div>
+              <p class="goods-name">[옵션]자몽사워/수량10box-스틱20개</p>
+              <p class="review-txt">
+                자몽은 처음 먹어봤는데 상큼하니 너무 맛있어요 ㅜㅜㅜ 밀크티만 먹다가 먹어봤는데 짱맛! 자몽이 적당히 쌉쌀달콤해서 먹기에 부담이 없어요 아침에 잠 깨기 좋습니다!!
+              </p>
+            </div>
+          </div>
+          <div class="review-item">
+            <div class="review-img">
+              <img src="05_review_img (1).png" alt="">
+            </div>
+            <div class="review-desc">
+              <div class="stars-id">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <span>|</span>
+                <em class="id">wjdgusd*****님</em>
+              </div>
+              <p class="goods-name">[옵션]홍백향차/수량10box-스틱20개</p>
+              <p class="review-txt">
+                먹고 싶은거 종류별로 주문해봤어요ㅎㅎ 인스타그램 통해서 만월회를 알게 되었는데 평소 진한 라떼 종류를 집에서 자주 해먹다보니 이번엔 커피 말고 디카페인으로 여러가지 찾던 중에 딱 제가 원하던 제품을 찾게 된 것 같아요. 도착하자마자 홍백향차부터 타서 마셔보았네용. 원액이어서 향부터 엄청 진하고 다 마실때까지 진하고 고소한 맛을 즐길 수 있을것 같구요.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </article>
   </section>
-
+  <!-- Article : Instagram -->
+  <!-- Footer -->
 </body>
 </html>

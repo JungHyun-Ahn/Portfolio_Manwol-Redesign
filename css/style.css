@@ -1,8 +1,14 @@
 @import url(./reset.css);
 
+
+
 /* slide pager */
+.pagers {
+  text-align: center;
+}
 .dot {
   display: inline-block;
+  margin: 0 2px;
   width: 15px;
   height: 15px;
   background-color: var(--light-gray);
@@ -14,6 +20,29 @@
   border-radius: 20px;
 }
 
+/* sub title */
+.sub-tit-box {
+  margin: 0 auto 30px;
+  max-width: 1200px;
+  text-align: center;
+}
+.sub-tit {
+  font-family: 'GmarketSansMedium';
+  font-size: var(--sub-title-size);
+  color: var(--main-color);
+}
+.sub-tit-bar {
+  margin: 15px auto;
+  width: 36px;
+  height: 2px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+.sub-tit-detail {
+  color: var(--light-gray);
+  font-size: var(--sub-title-desc-size);
+}
+
 /* === Main Nav === */
 #main-nav {
   position: fixed;
@@ -22,6 +51,10 @@
   width: 100%;
   height: 80px;
   background-color: #fff;
+}
+#main-nav.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 .main-nav-inner {
   margin: 0 auto;
@@ -58,7 +91,7 @@
   color: var(--main-color);
 }
 .nav-left .nav-menu li a {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--normal-txt-color);
 }
@@ -101,10 +134,10 @@
 /* === Main Slide === */
 .main-slide {
   position: relative;
-  margin: 0 auto;
+  margin: 80px auto 0;
   width: 100%;
   /* width: 1200px; */
-  height: 760px;
+  height: 660px;
   overflow: hidden;
 }
 .main-slide img {
@@ -122,7 +155,103 @@
 /* === Article : Intro === */
 .intro-inner {
   margin: 0 auto;
-  padding: 30px 0 50px;
-  width: 1200px;
+  padding: 30px 0 10rem;
+  max-width: 1200px;
   text-align: center;
+}
+.intro-logo {
+  margin-bottom: 30px;
+}
+.intro-tit {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+.intro-detail {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--normal-txt-color);
+}
+.intro-detail span {
+  display: block;
+  margin-top: 12px;
+}
+
+/* === Article : For Me and You === */
+#forMeAndYou-content {
+  padding-bottom: 10em;
+}
+.forMeAndYou-slide {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 90px;
+  max-width: 1380px;
+}
+.forMeAndYou-slide-display {
+  margin-bottom: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+.forMeAndYou-slide-inner {
+  width: 200%;
+  transition: 0.3s;
+}
+.for-slide-items {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: #fff;
+  float: left;
+
+  transition: 0.5s;
+}
+.for-slide-items {
+  opacity: 0.3;
+}
+.for-slide-items.show {
+  opacity: 1;
+}
+.for-slide-item .item-img {
+  flex: 1;
+}
+.for-slide-item .item-img img {
+  width: 100%;
+  height: 100%;
+}
+.for-slide-item .item-desc {
+  text-align: center;
+}
+.for-slide-item .item-desc span {
+  display: block;
+  margin: 15px 0 6px;
+  font-size: 16px;
+  color: var(--normal-txt-color);
+}
+.for-slide-item .item-desc p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+/* for slide arrow */
+.for-slide-arrow img {
+  position: absolute;
+  top: 36%;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  cursor: pointer;
+}
+.for-slide-arrow .arrowLeft {
+  left: 10px;
+}
+.for-slide-arrow .arrowRight {
+  right: 10px;
+}
+
+/* === Article : About === */
+.about-inner {
+  width: 100%;
+  background-color: var(--main-color);
 }

@@ -1,7 +1,5 @@
 @import url(./reset.css);
 
-
-
 /* slide pager */
 .pagers {
   text-align: center;
@@ -149,6 +147,8 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
+
+  transition: 0.5s;
 }
 .main-slide img.show {
   opacity: 1;
@@ -266,5 +266,78 @@
 /* === Article : About === */
 .about-inner {
   width: 100%;
+  margin-bottom: 10rem;
   background-color: var(--main-color);
+}
+.about-slide-box {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border: 2px solid red;
+  overflow: hidden;
+}
+.about-slide-items {
+  width: 300%;
+  height: inherit;
+  display: flex;
+  flex-flow: row;
+
+  /* margin-left: -100%; */
+}
+.about-slide-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img {
+  width: 400px;
+}
+.about-img img {
+  width: inherit;
+}
+.about-desc {
+  color: #fff;
+}
+#about-content .pagers {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  /* border: 1px solid yellow; */
+}
+#about-content .dot {
+  background-color: var(--light-gray);
+}
+#about-content .dot.active {
+  background-color: #fff;
+}
+
+/* === Article : Flavor === */
+.flavor-inner {
+  padding: 0 0 10rem;
+}
+
+/* === Article : Review === */
+.review-items {
+  margin: 0 auto;
+  max-width: 1200px;
+  
+}
+.review-item {
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  width: 100%;
+  background-color: var(--cloudy-gray);
+  border-radius: 10px;
+
+  display: flex;
+  flex-flow: row;
+}
+.review-img {
+  height: 200px;
+}
+.review-img img {
+  height: inherit;
 }

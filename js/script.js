@@ -1,27 +1,35 @@
-window.onload = function() {
-
-};
-
 // === Main Slide ===
 const mainSlideItems = document.querySelectorAll(".main-slide img");
+// let mainSlideLen = mainSlideItems.length
 let mainSlideIndex = 0;
 
 function mainSlide() {
   mainSlideItems.forEach(items => {
     items.classList.remove("show");
   });
-
   mainSlideItems[mainSlideIndex].classList.add("show");
-
-  if(mainSlideIndex > 5) {
-    mainSlideIndex = 0;
-    console.log(mainSlideIndex);
-  } else {
-    mainSlideIndex++;
-  }
+  // chat GPT...
+  mainSlideIndex = (mainSlideIndex + 1) % mainSlideItems.length;
+  // if(mainSlideIndex < mainSlideLen) {
+  //   mainSlideIndex++;
+  // } else {
+  //   mainSlideIndex = 0;
+  // }
   // console.log(mainSlideIndex);
 }
-// setInterval(mainSlide, 1000);
+setInterval(mainSlide, 3000);
+
+// let i = 0;
+
+// function test() {
+//   if(i<5) {
+//     i++;
+//   }else {
+//     i=0;
+//   }
+//   console.log(i);
+// }
+// setInterval(test, 1000);
 
 
 // === Article : For Me and You ===

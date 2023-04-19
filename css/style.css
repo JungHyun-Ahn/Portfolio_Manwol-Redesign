@@ -9,13 +9,15 @@
 .dot {
   display: inline-block;
   margin: 0 2px;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   background-color: var(--light-gray);
   border-radius: 50%;
+
+  cursor: pointer;
 }
 .dot.active {
-  width: 35px;
+  width: 40px;
   background-color: var(--main-color);
   border-radius: 20px;
 }
@@ -182,6 +184,18 @@
 #forMeAndYou-content {
   padding-bottom: 10em;
 }
+.forMeAndYou-inner .sub-tit {
+  display: none;
+}
+.forMeAndYou-inner .sub-tit.show {
+  display: block;
+}
+.forMeAndYou-inner .sub-tit-detail {
+  display: none;
+}
+.forMeAndYou-inner .sub-tit-detail.show {
+  display: block;
+}
 .forMeAndYou-slide {
   position: relative;
   margin: 0 auto;
@@ -195,7 +209,6 @@
 }
 .forMeAndYou-slide-inner {
   width: 200%;
-  transition: 0.3s;
 }
 .for-slide-items {
   margin: 0 auto;
@@ -206,7 +219,7 @@
   background-color: #fff;
   float: left;
 
-  transition: 0.5s;
+  transition: 1s;
 }
 .for-slide-items {
   opacity: 0.3;

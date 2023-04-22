@@ -1,5 +1,18 @@
 @import url(./reset.css);
 
+/* slider arrow */
+.slide-arrowCircle img {
+  position: absolute;
+  top: 36%;
+  cursor: pointer;
+}
+.slide-arrowCircle .arrowLeft {
+  left: 10px;
+}
+.slide-arrowCircle .arrowRight {
+  right: 10px;
+}
+
 /* slide pager */
 .pagers {
   text-align: center;
@@ -22,7 +35,7 @@
 
 /* sub title */
 .sub-tit-box {
-  margin: 0 auto 30px;
+  margin: 0 auto 60px;
   max-width: 1200px;
   text-align: center;
 }
@@ -41,6 +54,39 @@
 .sub-tit-detail {
   color: var(--light-gray);
   font-size: var(--sub-title-desc-size);
+}
+
+/* More View Button */
+.moreBtn {
+  padding: 0 20px;
+  width: 200px;
+  height: 45px;
+  border: 2px solid #fff;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+.moreBtn p {
+  padding-right: 10px;
+  text-transform: uppercase;
+  font-family: 'GmarketSansMedium';
+  font-size: 18px;
+}
+.moreBtn i {
+  font-size: 19px;
+  transition: transform 0.3s;
+}
+.moreBtn:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.moreBtn:hover i {
+  transform: translateX(10px);
 }
 
 /* === Main Nav === */
@@ -157,7 +203,7 @@
 /* === Article : Intro === */
 .intro-inner {
   margin: 0 auto;
-  padding: 30px 0 10rem;
+  padding: 30px 0;
   max-width: 1200px;
   text-align: center;
 }
@@ -181,8 +227,8 @@
 }
 
 /* === Article : For Me and You === */
-#forMeAndYou-content {
-  padding-bottom: 10em;
+.forMeAndYou-inner {
+  padding: 8rem 0;
 }
 .forMeAndYou-inner .sub-tit {
   display: none;
@@ -248,32 +294,18 @@
   font-weight: 600;
   color: var(--main-color);
 }
-/* for slide arrow */
-.for-slide-arrow img {
-  position: absolute;
-  top: 36%;
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
-  cursor: pointer;
-}
-.for-slide-arrow .arrowLeft {
-  left: 10px;
-}
-.for-slide-arrow .arrowRight {
-  right: 10px;
-}
 
 /* === Article : About === */
 .about-inner {
   width: 100%;
-  margin-bottom: 10rem;
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
+  background-color: #011E41;
 }
 .about-slide-box {
   position: relative;
-  width: 100%;
-  height: 350px;
-  border: 2px solid red;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 420px;
   overflow: hidden;
 }
 .about-slide-items {
@@ -285,10 +317,12 @@
   /* margin-left: -100%; */
 }
 .about-slide-item {
+  padding-bottom: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 .about-img {
   width: 400px;
@@ -299,13 +333,28 @@
 .about-desc {
   color: #fff;
 }
+#about-content .arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+
+  cursor: pointer;
+}
+#about-content .arrows .left {
+  position: absolute;
+  left: 0;
+}
+#about-content .arrows .right {
+  position: absolute;
+  right: 0;
+}
 #about-content .pagers {
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  /* border: 1px solid yellow; */
 }
 #about-content .dot {
   background-color: var(--light-gray);
@@ -313,31 +362,262 @@
 #about-content .dot.active {
   background-color: #fff;
 }
+.about-desc h3 {
+  margin-bottom: 10px;
+  font-size: var(--sub-title-size);
+}
+.about-desc > p {
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 300;
+}
 
 /* === Article : Flavor === */
 .flavor-inner {
-  padding: 0 0 10rem;
+  padding: 8rem 0;
 }
-
-/* === Article : Review === */
-.review-items {
+.flavor-slide {
+  position: relative;
   margin: 0 auto;
-  max-width: 1200px;
-  
+  padding: 0 90px;
+  max-width: 1380px;
 }
-.review-item {
-  margin-bottom: 20px;
-  padding: 20px 40px;
-  width: 100%;
-  background-color: var(--cloudy-gray);
-  border-radius: 10px;
+.flavor-slide-inner {
+  /* margin: 0 auto; */
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+} 
+/* Left Detail Slide */
+.flavor-slide-detail {
+  /* width: 55%; */
+  min-width: 550px;
+  max-width: 600px;
+  overflow: hidden;
+}
+.detail-items {
+  /* margin-left: -100%; */
+  width: calc(100% * 11);
 
   display: flex;
   flex-flow: row;
 }
+.detail-item {
+  width: calc(100% / 11);
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+.detail-item-img {
+  flex: 5;
+  font-size: 0;
+}
+.detail-item-img img {
+  width: 100%;
+}
+.detail-item-desc {
+  flex: 7;
+  width: 350px;
+  font-size: 0;
+}
+.detail-item-desc em {
+  font-size: 15px;
+  font-style: normal;
+  color: #666;
+}
+.detail-item-desc h4 {
+  font-size: 24px;
+  color: var(--main-color);
+}
+.detail-item-desc h5 {
+  font-size: 20px;
+  color: var(--dark-gray);
+}
+.detail-item-desc .bar {
+  margin: 17px 0 15px;
+  width: 45px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: var(--main-color);
+}
+.detail-item-desc p {
+  font-size: 17px;
+  color: var(--normal-txt-color);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.detail-item-desc p strong {
+  font-weight: 600;
+  color: var(--main-color);
+}
+/* Right Simple Slide */
+.flavor-slide-simple {
+  width: calc(150px * 3 + 20px * 3);
+  overflow: hidden;
+}
+.simple-items {
+  /* margin-left: -170px; */
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(150px * 11 + 20px * 11);
+}
+.simple-item {
+  width: 150px;
+  margin-right: 20px;
+}
+.simple-item-img {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 0;
+  border: 1px solid #eee;
+  border-radius: 100%;
+}
+.simple-item-img img {
+  width: inherit;
+  border-radius: 100%;
+}
+.simple-item p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+/* === Article : Review === */
+#review-content {
+  background-color: var(--cloudy-gray);
+}
+.review-inner {
+  padding: 8rem 0 5rem;
+}
+.review-items {
+  margin: 0 auto 3rem;
+  padding: 0 50px;
+  max-width: 1000px;
+}
+.review-item {
+  padding: 35px 0;
+  width: 100%;
+  /* background-color: var(--cloudy-gray); */
+  /* border-radius: 5px; */
+  /* border-top: 1px solid var(--main-color); */
+  border-bottom: 1px solid var(--main-color);
+
+  display: flex;
+  flex-flow: row;
+  gap: 30px;
+}
+.review-item:last-child {
+  padding-bottom: none;
+  border: none;
+}
 .review-img {
+  flex: 3;
   height: 200px;
 }
 .review-img img {
-  height: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.review-desc {
+  flex: 7;
+}
+.review-desc .stars-id {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.review-desc .stars {
+  font-size: 16px;
+  color: var(--main-color);
+}
+.review-desc span, .review-desc .id {
+  color: #666;
+}
+.review-desc span {
+  font-size: 11px;
+}
+.review-desc .id {
+  font-size: 15px;
+  font-style: normal;
+}
+.review-desc .goods-name{
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.review-desc .review-txt {
+  font-size: 16px;
+  color: var(--normal-txt-color);
+  word-break: keep-all;
+}
+#review-content .more-txt {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: var(--normal-txt-color);
+  text-align: center;
+}
+#review-content .moreBtn {
+  margin: 0 auto;
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+#review-content .moreBtn:hover {
+  background-color: var(--main-color);
+  color: var(--cloudy-gray);
+  font-weight: normal;
+}
+
+/* === Article : Instagram === */
+#instar-content {
+  /* background-color: var(--main-color); */
+  background-color: #011E41;
+  color: #fff;
+}
+.instar-inner {
+  padding: 8rem 0;
+}
+#instar-content .sub-tit {
+  color: #fff;
+}
+#instar-content .sub-tit-bar {
+  background-color: #fff;
+}
+#instar-content .sub-tit-detail a {
+  color: #fff;
+  color: var(--light-gray);
+}
+.instar-items {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.instar-item {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  background-color: #fff;
+}
+.instar-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Footer === */
+footer {
+  padding: 50px 0;
+  background-color: var(--dark-gray);
 }

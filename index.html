@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/df4f7d9123.js" crossorigin="anonymous"></script>
   <!-- Custom JS & CSS -->
   <script defer src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
@@ -16,9 +18,9 @@
   <nav id="main-nav">
     <div class="main-nav-inner">
       <div class="nav-left">
-        <div class="nav-logo">
+        <a href="./index.html" class="nav-logo">
           <img src="./images/00_logo.png" alt="만월회 로고">
-        </div>
+        </a>
         <ul class="nav-menu">
           <li><a href="#">첫 구매라면?</a></li>
           <li><a href="#">SHOP</a></li>
@@ -145,7 +147,7 @@
             </div>
           </div>
           <!-- arrow -->
-          <div class="for-slide-arrow">
+          <div class="slide-arrowCircle">
             <img class="arrowLeft" src="./images/arrow-left.png" alt="" >
             <img class="arrowRight" src="./images/arrow-right.png" alt="">
           </div>
@@ -174,16 +176,16 @@
                   어떤 비전과 목표를 가지고 있는지<br />
                   궁금하신가요?
                 </p>
-                <div class="moreBtn1">
+                <div class="moreBtn">
                   <p>More View</p>
-                  <i></i>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </div>
             <!-- 조각달 카페 -->
             <div class="about-slide-item">
               <div class="about-img">
-                <img src="./images/03_about (1).png" alt="만월회란? 이미지">
+                <img src="./images/03_about (2).png" alt="만월회란? 이미지">
               </div>
               <div class="about-desc">
                 <h3>조각달 카페</h3>
@@ -192,30 +194,36 @@
                   새로운 가치를 만드는 카페들<br />
                   전국에 700여 개의 조각달이 존재합니다.
                 </p>
-                <div class="moreBtn1">
+                <div class="moreBtn">
                   <p>More View</p>
-                  <i></i>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </div>
             <!-- Rcruit -->
             <div class="about-slide-item">
               <div class="about-img">
-                <img src="./images/03_about (1).png" alt="만월회란? 이미지">
+                <img src="./images/03_about (3).png" alt="만월회란? 이미지">
               </div>
               <div class="about-desc">
                 <h3>Rcruit</h3>
                 <p>
                   보름달 뜨는 날 천재들과 함께<br />
                   일하고 싶다면 만월회에 지원해보세요.<br />
-                  당신도 몰랐던 천재성을 발견할 수도 있으니!
+                  당신도 몰랐던 천재성을<br />
+                  발견할 수도 있으니!
                 </p>
-                <div class="moreBtn1">
+                <div class="moreBtn">
                   <p>More View</p>
-                  <i></i>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </div>
+          </div>
+          <!-- arrows -->
+          <div class="arrows">
+            <img src="./images/arrow_w_left.png" class="left" alt="왼쪽 화살표">
+            <img src="./images/arrow_w_right.png" class="right" alt="오른쪽 화살표">
           </div>
           <!-- pagers -->
           <div class="pagers">
@@ -235,14 +243,265 @@
           <p class="sub-tit-detail">취향껏 즐기는 나만의 홈카페</p>
         </div>
         <div class="flavor-slide">
-          <div class="flavor-slide-detail">
-            <!-- 왜그랬을까 -->
+          <div class="flavor-slide-inner">
+            <!-- Left Detail Slide -->
+            <div class="flavor-slide-detail">
+              <div class="detail-items">
+                <!-- 1) 리얼떨기 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(1).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>진짜 딸기 83%</em>
+                    <h4>리얼 딸기 원액 베이스</h4>
+                    <h5>Real Strawberry</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>국산 딸기 특유의 진한 새콤함과 달콤함</strong>을 풍부하게 즐겨보세요.<br />
+                      마지막으로 씹히는 <strong>딸기씨의 고소한 잔향</strong>이 입안에서 계속 맴돌거예요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 2) 피치앤블랙티 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(2).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>생 복숭아 아이스티</em>
+                    <h4>피치앤블랙티 원액 베이스</h4>
+                    <h5>Peach & Blacktea</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>라임과 복숭아의 새콤달콤한 과일맛</strong>을 즐겨보세요.<br />
+                      뒤에 남는 <strong>은은한 총차향</strong>이 오랫동안 당신의 코에 맴돌거예요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 3) 말차 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(3).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>100% 제주산 말차</em>
+                    <h4>말차 원액 베이스</h4>
+                    <h5>Matcha</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>볶은 찻잎의 씁쓸함</strong>이 채 가시기 전,<br />
+                      <strong>화이트 초콜릿의 달콤함</strong>이 입안 가득 퍼집니다.<br />
+                      <strong>제주말차의 풍부한 향</strong>이 오랫동안 남을거예요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 4) 밀크티 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(4).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>시그니처 1위</em>
+                    <h4>밀크티 원액 베이스</h4>
+                    <h5>Milk tea</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>크리미한 풍미</strong>로 시작해, <strong>카카오 캐러멜</strong>이 진하게 내려앉으면 
+                      <strong>아쌈과 얼그레이를 블렌딩한 홍차 향</strong>이 코와 혀끝에 잔잔하게 맴돌아요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 5) 자몽샤워 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(5).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>여름의 새콤함</em>
+                    <h4>자몽샤워 원액 베이스</h4>
+                    <h5>Grapefruit sour</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>자몽의 싱그러운 향긋함</strong>과 <strong>라임의 강력한 신맛</strong>이 입속을 강타하면
+                      <strong>청포도와 청사과의 청량한 달콤함</strong>으로 마무리 될 거예요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 6) 악마초코 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(6).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>프리미엄 초코 한가득</em>
+                    <h4>악마초코 원액 베이스</h4>
+                    <h5>Devil's chocolate</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>밀크의 묵직한 크리미함</strong>이 입속을 가득 코팅해 주면, <strong>아몬드의 고소함</strong>이 살포시 앉았다가 <strong>진한 다크초콜릿의 향연</strong>이 펼쳐집니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- 7) 콜드브루 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(7).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>라떼가 맛있는</em>
+                    <h4>콜드브루 원액 베이스</h4>
+                    <h5>Coldbrew</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      에티오피아의 <strong>태양을 담은 산미</strong>가 느껴지면 <strong>시트러스의 달콤한 과일 맛</strong>이 살짝 고개를 내밀고, <strong>카카오의 고소한 후미</strong>가 고급스럽게 입안을 맴돌아요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 8) 민트초코 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(8).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>극강의 민트 밸런스</em>
+                    <h4>민트초코 원액 베이스</h4>
+                    <h5>Mint chocolate</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>부드러운 밀크 초코</strong>를 느끼려다 보면,  <strong>제대로 상쾌한 민트</strong>가 강력하게 자리 잡습니다.<br />
+                      <strong>민트 허브의 향긋한 잔 향</strong>이 오랫동안 여운을 남길 거예요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 9) 쑥 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(9).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>봄의 향기</em>
+                    <h4>쑥 원액 베이스</h4>
+                    <h5>Ssuk</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      <strong>향긋한 쑥 떡의 달콤함</strong>직후에 느껴지는 <strong>부드러운 크림의 맛.</strong><br />
+                      마지막으로 <strong>고운 쑥가루에서 퍼지는 봄 향기</strong>를 가득 느껴보세요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 10) 단호박 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(10).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>든든한 식사 대용</em>
+                    <h4>단호박 원액 베이스</h4>
+                    <h5>Sweet pumpkin</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      고급스러운 <strong>호박 꿀의 달콤함</strong>을 느낀 후, 자연스럽게 <strong>씹히는 단호박 과육</strong>을 경험하세요.<br />
+                      <strong>진한 단호박 특유의 보디감</strong>이 입안 전체를 감쌀 거예요.
+                    </p>
+                  </div>
+                </div>
+                <!-- 11) 홍백향차 -->
+                <div class="detail-item">
+                  <div class="detail-item-img">
+                    <img src="./images/04_detail_flavor_(11).gif" alt="">
+                  </div>
+                  <div class="detail-item-desc">
+                    <em>카페인없이 향긋한</em>
+                    <h4>홍백향차 원액 베이스</h4>
+                    <h5>Hibiscus & Passion Fruit</h5>
+                    <div class="bar"></div>
+                    <p>  
+                      마시기 전부터 느껴지는 <strong>히비스커스의 풍부한 향</strong>과 <strong>새콤달콤한 패션후르츠의 조화</strong>를 깊게 음미해보세요.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Simple Slide -->
+            <div class="flavor-slide-simple">
+              <div class="simple-items">
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(1).png" alt="">
+                  </div>
+                  <p>리얼딸기</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(2).png" alt="">
+                  </div>
+                  <p>피치앤블랙티</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(3).png" alt="">
+                  </div>
+                  <p>말차</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(4).png" alt="">
+                  </div>
+                  <p>밀크티</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(5).png" alt="">
+                  </div>
+                  <p>자몽샤워</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(6).png" alt="">
+                  </div>
+                  <p>악마초코</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(7).png" alt="">
+                  </div>
+                  <p>콜드브루</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(8).png" alt="">
+                  </div>
+                  <p>민트초코</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(9).png" alt="">
+                  </div>
+                  <p>쑥</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(10).png" alt="">
+                  </div>
+                  <p>단호박</p>
+                </div>
+                <div class="simple-item">
+                  <div class="simple-item-img">
+                    <img src="./images/04_simple_flavor_(11).png" alt="">
+                  </div>
+                  <p>홍백향차</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flavor-slide-simple">
-            <!-- 왜그랬을까22 -->
+          <!-- arrow -->
+          <div class="slide-arrowCircle">
+            <img class="arrowLeft" src="./images/arrow-left.png" alt="" >
+            <img class="arrowRight" src="./images/arrow-right.png" alt="">
           </div>
         </div>
-      </div>
+      </div>  
     </article>
     <!-- Article : Review -->
     <article id="review-content">
@@ -254,7 +513,7 @@
         <div class="review-items">
           <div class="review-item">
             <div class="review-img">
-              <img src="./images/05_review_img (1).png" alt="" width="250px">
+              <img src="./images/05_review_img (1).png" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">
@@ -276,7 +535,7 @@
           </div>
           <div class="review-item">
             <div class="review-img">
-              <img src="" alt="">
+              <img src="./images/05_review_img (2).jpg" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">
@@ -298,7 +557,7 @@
           </div>
           <div class="review-item">
             <div class="review-img">
-              <img src="" alt="">
+              <img src="./images/05_review_img (3).jpg" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">
@@ -320,7 +579,7 @@
           </div>
           <div class="review-item">
             <div class="review-img">
-              <img src="" alt="">
+              <img src="./images/05_review_img (4).jpg" alt="">
             </div>
             <div class="review-desc">
               <div class="stars-id">
@@ -341,10 +600,49 @@
             </div>
           </div>
         </div>
+        <p class="more-txt">더 많은 리뷰를 확인해보세요!</p>
+        <div class="moreBtn">
+          <p>More View</p>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
       </div>
     </article>
+    <!-- Article : Instagram -->
+    <div id="instar-content">
+      <div class="instar-inner">
+        <div class="sub-tit-box">
+          <h2 class="sub-tit">INSTARGRAM</h2>
+          <div class="sub-tit-bar"></div>
+          <p class="sub-tit-detail">
+            <a href="https://www.instagram.com/_manwol/" target="_blank">@_manwol</a>
+          </p>
+        </div>
+        <div class="instar-items">
+          <div class="instar-item">
+            <img src="./images/06_instar (1).jpg" alt="">
+          </div>
+          <div class="instar-item">
+            <img src="./images/06_instar (2).jpg" alt="">
+          </div>
+          <div class="instar-item">
+            <img src="./images/06_instar (3).jpg" alt="">
+          </div>
+          <div class="instar-item">
+            <img src="./images/06_instar (4).jpg" alt="">
+          </div>
+          <div class="instar-item">
+            <img src="./images/06_instar (5).jpg" alt="">
+          </div>
+          <div class="instar-item">
+            <img src="./images/06_instar (6).jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <!-- Article : Instagram -->
   <!-- Footer -->
+  <footer>
+    푸터내용
+  </footer>
 </body>
 </html>

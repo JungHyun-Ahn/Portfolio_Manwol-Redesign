@@ -28,17 +28,23 @@ body {
   font-style: normal;
 }
 
-
-
 /* Variables */
 :root {
-  --main-color: #142F5F;
+  --main-color: #142f5f;
   --crimson: #FE5358;
-  --cloudy-gray: #F9F9F9;
+  --cloudy-gray: #fafafa;
   --light-gray: #999;
-  --dark-gray: #333;
+  --dark-gray: #3d3d3d;
   --normal-txt-color: #555;
 
   --sub-title-size: 28px;
   --sub-title-desc-size: 18px;
 }
+
+/* drag 방지 */
+/* body {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+} */

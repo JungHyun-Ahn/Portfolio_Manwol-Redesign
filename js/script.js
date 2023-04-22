@@ -1,6 +1,15 @@
+// === Main Navigation ===
+const mainNav = document.querySelector("#main-nav");
+window.addEventListener("scroll", () => {
+  if(scrollY > 0) {
+    mainNav.classList.add("active");
+  } else {
+    mainNav.classList.remove("active");
+  }
+});
+
 // === Main Slide ===
 const mainSlideItems = document.querySelectorAll(".main-slide img");
-// let mainSlideLen = mainSlideItems.length
 let mainSlideIndex = 0;
 
 function mainSlide() {
@@ -8,34 +17,14 @@ function mainSlide() {
     items.classList.remove("show");
   });
   mainSlideItems[mainSlideIndex].classList.add("show");
-  // chat GPT...
   mainSlideIndex = (mainSlideIndex + 1) % mainSlideItems.length;
-  // if(mainSlideIndex < mainSlideLen) {
-  //   mainSlideIndex++;
-  // } else {
-  //   mainSlideIndex = 0;
-  // }
-  // console.log(mainSlideIndex);
 }
-setInterval(mainSlide, 3000);
-
-// let i = 0;
-
-// function test() {
-//   if(i<5) {
-//     i++;
-//   }else {
-//     i=0;
-//   }
-//   console.log(i);
-// }
-// setInterval(test, 1000);
-
+// setInterval(mainSlide, 3000);
 
 // === Article : For Me and You ===
 // For You and Me Slide
-const forNextBtn = document.querySelector(".for-slide-arrow .arrowRight");
-const forPrevBtn = document.querySelector(".for-slide-arrow .arrowLeft");
+const forNextBtn = document.querySelector(".slide-arrowCircle .arrowRight");
+const forPrevBtn = document.querySelector(".slide-arrowCircle .arrowLeft");
 const forSlideDisplay = document.querySelector(".forMeAndYou-slide-inner");
 const pagerDots = document.querySelectorAll(".forMeAndYou-slide .pagers .dot");
 

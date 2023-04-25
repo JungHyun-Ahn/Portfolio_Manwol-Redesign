@@ -182,8 +182,8 @@
 .main-slide {
   position: relative;
   margin: 80px auto 0;
-  width: 100%;
-  /* width: 1200px; */
+  /* width: 100%; */
+  max-width: 1920px;
   height: 660px;
   overflow: hidden;
 }
@@ -605,12 +605,12 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 45px;
 }
 .instar-item {
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 370px;
+  height: 370px;
   background-color: #fff;
 }
 .instar-item img {
@@ -620,7 +620,92 @@
 }
 
 /* === Footer === */
-footer {
+#main-footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer-top {
+  margin: 0 auto;
   padding: 50px 0;
-  background-color: var(--dark-gray);
+  max-width: 1200px;
+}
+.footer-txt {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-nav ul {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-nav ul li:nth-child(2n) {
+  transform: translateY(-2px);
+  font-size: 12px;
+}
+.footer-nav ul li a {
+  font-size: 18px;
+  color: #fff;
+}
+.footer-txt-left .detail {
+  font-size: 16px;
+  color: #999;
+}
+.footer-txt-left .detail p {
+  margin-bottom: 8px;
+}
+.footer-txt-left .detail span {
+  display: inline-block;
+  transform: translateY(-3px);
+  padding: 0 10px;
+  font-size: 10px;
+  color: #666;
+}
+.footer-txt-right {
+  text-align: right;
+}
+.footer-txt-right .tel {
+  margin-bottom: 15px;
+}
+.footer-txt-right .tel p {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.footer-txt-right .tel strong {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'GmarketSansMedium';
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.footer-txt-right .tel .time {
+  color: #999;
+}
+.footer-txt-right .tel .time p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.footer-txt-right .sns a {
+  margin-left: 9.5px;
+}
+.footer-txt-right .sns img {
+  width: 32px;
+}
+.footer-bottom {
+  padding: 50px;
+  text-align: center;
+  color: #999;
+  border-top: 1px solid #555;
+}
+.footer-bottom p{
+  font-size: 18px;
+}
+.footer-bottom span {
+  display: block;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  color: #555;
 }

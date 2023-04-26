@@ -1,10 +1,13 @@
 // === Main Navigation ===
 const mainNav = document.querySelector("#main-nav");
+const bubble = document.querySelector(".bubble");
 window.addEventListener("scroll", () => {
   if(scrollY > 0) {
     mainNav.classList.add("active");
+    bubble.classList.remove("show");
   } else {
     mainNav.classList.remove("active");
+    bubble.classList.add("show");
   }
 });
 

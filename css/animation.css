@@ -1,0 +1,5 @@
+/* Nav Bubble Animation */
+@keyframes bubbleMove {
+  0% { top: 44px; }
+  100% { top: 38px;}
+}

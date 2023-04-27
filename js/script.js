@@ -1,5 +1,5 @@
 // === Main Navigation ===
-const mainNav = document.querySelector("#main-nav");
+const mainNav = document.querySelector(".main-nav");
 const bubble = document.querySelector(".bubble");
 window.addEventListener("scroll", () => {
   if(scrollY > 0) {
@@ -10,6 +10,34 @@ window.addEventListener("scroll", () => {
     bubble.classList.add("show");
   }
 });
+
+const mainNavLists = document.querySelectorAll(".nav-left .nav-menu > li > a");
+const subMenus = document.querySelectorAll(".sub-menu");
+const subMenuBG = document.querySelector(".sub-menu-bg");
+let listIndex = 0;
+
+mainNavLists.forEach(list => {
+  list.addEventListener("mouseover", (e) => {
+    const lists = [...e.target.parentElement.parentElement.children];
+    listIndex = lists.indexOf(e.target.parentElement);
+    console.log(listIndex);
+    subMenus.forEach(subMenu => {
+      subMenu.classList.remove("active");
+    });
+    if(listIndex >= 1 && listIndex<=4) {
+      subMenus[listIndex - 1].classList.add("active");
+      subMenuBG.classList.add("active");
+    } else {
+      subMenuBG.classList.remove("active");
+    }
+  });
+});
+mainNav.addEventListener("mouseleave", () => {
+    subMenus.forEach(subMenu => {
+      subMenu.classList.remove("active");
+    });
+    subMenuBG.classList.remove("active");
+  });
 
 // === Main Slide ===
 const mainSlideItems = document.querySelectorAll(".main-slide img");

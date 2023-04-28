@@ -20,11 +20,15 @@ mainNavLists.forEach(list => {
   list.addEventListener("mouseover", (e) => {
     const lists = [...e.target.parentElement.parentElement.children];
     listIndex = lists.indexOf(e.target.parentElement);
-    console.log(listIndex);
+    
+    lists.forEach(li => {
+      li.classList.remove("active");
+    });
     subMenus.forEach(subMenu => {
       subMenu.classList.remove("active");
     });
     if(listIndex >= 1 && listIndex<=4) {
+      list.parentElement.classList.add("active");
       subMenus[listIndex - 1].classList.add("active");
       subMenuBG.classList.add("active");
     } else {
@@ -33,11 +37,15 @@ mainNavLists.forEach(list => {
   });
 });
 mainNav.addEventListener("mouseleave", () => {
-    subMenus.forEach(subMenu => {
-      subMenu.classList.remove("active");
-    });
-    subMenuBG.classList.remove("active");
+  const mainNavLi = document.querySelectorAll(".nav-left .nav-menu > li");
+  mainNavLi.forEach(li => {
+    li.classList.remove("active");
   });
+  subMenus.forEach(subMenu => {
+    subMenu.classList.remove("active");
+  });
+  subMenuBG.classList.remove("active");
+});
 
 // === Main Slide ===
 const mainSlideItems = document.querySelectorAll(".main-slide img");
@@ -92,6 +100,7 @@ function forSlide() {
   });
 }
 
+
 // === Article : For Me and You ===
 // About Slide
 const aboutNextBtn = document.querySelector("#about-content .arrows .right");
@@ -130,6 +139,19 @@ aboutpagerDots.forEach(dot => {
       aboutSlideDisplay.style.marginLeft = marginLeftValue + "%";
     }
   })
+});
+// loop
+let aboutSlideLoop = setInterval(() => {
+  aboutNextSlide();
+}, 6000);
+const aboutSlideBox = document.querySelector(".about-slide-box");
+aboutSlideBox.addEventListener("mouseover", () => {
+  clearInterval(aboutSlideLoop);
+});
+aboutSlideBox.addEventListener("mouseout", () => {
+  aboutSlideLoop = setInterval(() => {
+    aboutNextSlide();
+  }, 6000);
 });
 
 // nextSlide
@@ -219,6 +241,20 @@ simpleSlide.style.marginLeft = simpleMarginLeftValue + "px";
 // addEventListener
 flavorNextBtn.addEventListener("click", flavorNextSlide);
 flavorPrevBtn.addEventListener("click", flavorPrevSlide);
+
+// loop
+let flavorSlideLoop = setInterval(() => {
+  flavorNextSlide();
+}, 6000);
+const flavorSlideBox = document.querySelector(".flavor-slide");
+flavorSlideBox.addEventListener("mouseover", () => {
+  clearInterval(flavorSlideLoop);
+});
+flavorSlideBox.addEventListener("mouseout", () => {
+  flavorSlideLoop = setInterval(() => {
+    flavorNextSlide();
+  }, 6000);
+});
 
 // nextSlide
 function flavorNextSlide() {

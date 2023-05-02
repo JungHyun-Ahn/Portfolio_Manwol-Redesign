@@ -3,3 +3,9 @@
   0% { top: 44px; }
   100% { top: 38px;}
 }
+
+/* Move Animation */
+@keyframes moveTop {
+  from{opacity: 0; transform: translateY(20px);}
+  to{opacity: 1; transform: translateY(0);}
+}

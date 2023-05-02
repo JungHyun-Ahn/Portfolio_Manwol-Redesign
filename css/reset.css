@@ -41,10 +41,9 @@ body {
   --sub-title-desc-size: 18px;
 }
 
-/* drag 방지 */
-/* body {
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none
-} */
+@media screen and (max-width:767px) {
+  :root {
+    --sub-title-size: 25px;
+    --sub-title-desc-size: 15px;
+  }
+}

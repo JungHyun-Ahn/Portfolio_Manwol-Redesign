@@ -2,7 +2,7 @@
 const mainNav = document.querySelector(".main-nav");
 const bubble = document.querySelector(".bubble");
 window.addEventListener("scroll", () => {
-  if(scrollY > 0) {
+  if(scrollY > 70) {
     mainNav.classList.add("active");
     bubble.classList.remove("show");
   } else {
@@ -47,6 +47,56 @@ mainNav.addEventListener("mouseleave", () => {
   subMenuBG.classList.remove("active");
 });
 
+// === Mobile Main Navigation ===
+const mobileTopNav = document.querySelector(".main-nav-mo-inner");
+const mobileMenuBtn = document.querySelector("input#menu-btn");
+const mobileMenuBox = document.querySelector(".nav-mo-menu-box");
+
+
+mobileMenuBtn.addEventListener("click", () => {
+  if(mobileMenuBtn.checked) {
+    mobileMenuBox.scrollTo(0, 0);
+    mobileTopNav.style.borderBottom = "1px solid #eee";
+    mobileMenuBox.style.transform = "translateX(0)";
+    mobileMenuBox.style.transition = "300ms";
+  } else {
+    mobileTopNav.style.borderBottom = "none";
+    mobileMenuBox.style.transform = "translateX(-100%)";
+  }
+})
+
+
+// ** MOVE ANIMATION ** 
+// === Article : Intro ===
+const introTextTop = document.querySelector(".intro-tit").offsetTop;
+const introTit = document.querySelector(".intro-tit");
+const introDetail = document.querySelector(".intro-detail");
+
+window.addEventListener("scroll", () => {
+  if(scrollY > introTextTop - window.innerHeight) {
+    introTit.classList.add("moveTop");
+    introDetail.classList.add("moveTop");
+  } else {
+    introTit.classList.remove("moveTop");
+    introDetail.classList.remove("moveTop");
+  }
+});
+
+// Article : Review
+const reviewItems = document.querySelectorAll(".review-items .review-item");
+
+window.addEventListener("scroll", () => {
+  reviewItems.forEach(item => {
+    if(scrollY > item.offsetTop - window.innerHeight) {
+      item.classList.add("moveTop");
+    } else {
+      item.classList.remove("moveTop");
+    }
+  });
+});
+
+
+// ** SLIDE **
 // === Main Slide ===
 const mainSlideItems = document.querySelectorAll(".main-slide img");
 let mainSlideIndex = 0;
@@ -100,8 +150,7 @@ function forSlide() {
   });
 }
 
-
-// === Article : For Me and You ===
+// === Article : About ===
 // About Slide
 const aboutNextBtn = document.querySelector("#about-content .arrows .right");
 const aboutPrevBtn = document.querySelector("#about-content .arrows .left");
@@ -144,6 +193,7 @@ aboutpagerDots.forEach(dot => {
 let aboutSlideLoop = setInterval(() => {
   aboutNextSlide();
 }, 6000);
+
 const aboutSlideBox = document.querySelector(".about-slide-box");
 aboutSlideBox.addEventListener("mouseover", () => {
   clearInterval(aboutSlideLoop);
@@ -320,4 +370,72 @@ function flavorPrevSlide() {
       simpleSlide.style.marginLeft = simpleMarginLeftValue + "px";
     },500);
   }
+}
+
+// Mobile 화면
+if (matchMedia("screen and (max-width: 767px)").matches) {
+  // Text 추가
+  const flavorSubTitDetail = document.querySelector("#flavor-content .sub-tit-detail");
+  flavorSubTitDetail.innerHTML = "취향껏 즐기는 나만의 홈카페<br />- 좌우로 drag 해보세요! -"
+
+  // ** MOVE ANIMATION ** 
+  // === Article : Intro ===
+  introTit.classList.add("moveTop");
+  introDetail.classList.add("moveTop");
+
+  // ** Slide **  => 자동 슬라이드 삭제 / drag 추가
+  // === Article : For Me and You ===
+  //drag
+  let forStartX, forEndX ;
+  function forTouchStart(event) {
+    forStartX = event.touches[0].pageX
+  }
+  function forTouchEnd(event) {
+    forEndX = event.changedTouches[0].pageX;
+    if(forStartX > forEndX){
+      forSlide();
+    }else{
+      forSlide();
+    }
+  }
+  forSlideDisplay.addEventListener('touchstart', forTouchStart);
+  forSlideDisplay.addEventListener('touchend', forTouchEnd);
+
+  // === Article : About ===
+  //drag
+  clearInterval(aboutSlideLoop);
+
+  let aboutStartX, aboutEndX ;
+  function aboutTouchStart(event) {
+    aboutStartX = event.touches[0].pageX
+  }
+  function aboutTouchEnd(event) {
+    aboutEndX = event.changedTouches[0].pageX;
+    if(aboutStartX > aboutEndX){
+      aboutNextSlide();
+    }else{
+      aboutPrevSlide();
+    }
+  }
+  aboutSlideDisplay.addEventListener('touchstart', aboutTouchStart);
+  aboutSlideDisplay.addEventListener('touchend', aboutTouchEnd);
+
+  // === Article : Flavor ===
+  //drag
+  clearInterval(flavorSlideLoop);
+  const flavorDetailDisplay = document.querySelector(".flavor-slide-detail");
+  let flavorStartX, flavorEndX ;
+  function flavorTouchStart(event) {
+    flavorStartX = event.touches[0].pageX
+  }
+  function flavorTouchEnd(event) {
+    flavorEndX = event.changedTouches[0].pageX;
+    if(flavorStartX > flavorEndX){
+      flavorNextSlide();
+    }else{
+      flavorPrevSlide();
+    }
+  }
+  flavorDetailDisplay.addEventListener('touchstart', flavorTouchStart);
+  flavorDetailDisplay.addEventListener('touchend', flavorTouchEnd);
 }

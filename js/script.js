@@ -47,23 +47,6 @@ mainNav.addEventListener("mouseleave", () => {
   subMenuBG.classList.remove("active");
 });
 
-// === Mobile Main Navigation ===
-const mobileTopNav = document.querySelector(".main-nav-mo-inner");
-const mobileMenuBtn = document.querySelector("input#menu-btn");
-const mobileMenuBox = document.querySelector(".nav-mo-menu-box");
-
-
-mobileMenuBtn.addEventListener("click", () => {
-  if(mobileMenuBtn.checked) {
-    mobileMenuBox.scrollTo(0, 0);
-    mobileTopNav.style.borderBottom = "1px solid #eee";
-    mobileMenuBox.style.transform = "translateX(0)";
-    mobileMenuBox.style.transition = "300ms";
-  } else {
-    mobileTopNav.style.borderBottom = "none";
-    mobileMenuBox.style.transform = "translateX(-100%)";
-  }
-})
 
 
 // ** MOVE ANIMATION ** 
@@ -372,6 +355,25 @@ function flavorPrevSlide() {
   }
 }
 
+// Tablet 화면
+if (matchMedia("screen and (max-width: 950px)").matches) {
+  // === Mobile Main Navigation ===
+  const mobileTopNav = document.querySelector(".main-nav-mo-inner");
+  const mobileMenuBtn = document.querySelector("input#menu-btn");
+  const mobileMenuBox = document.querySelector(".nav-mo-menu-box");
+
+
+  mobileMenuBtn.addEventListener("click", () => {
+    if(mobileMenuBtn.checked) {
+      mobileMenuBox.scrollTo(0, 0);
+      mobileMenuBox.style.transform = "translateX(0)";
+      mobileMenuBox.style.transition = "300ms";
+    } else {
+      mobileMenuBox.style.transform = "translateX(-100%)";
+    }
+  })
+}
+
 // Mobile 화면
 if (matchMedia("screen and (max-width: 767px)").matches) {
   // Text 추가
@@ -380,8 +382,8 @@ if (matchMedia("screen and (max-width: 767px)").matches) {
 
   // ** MOVE ANIMATION ** 
   // === Article : Intro ===
-  introTit.classList.add("moveTop");
-  introDetail.classList.add("moveTop");
+  introTit.style.opacity = 1;
+  introDetail.style.opacity = 1;
 
   // ** Slide **  => 자동 슬라이드 삭제 / drag 추가
   // === Article : For Me and You ===
@@ -392,9 +394,9 @@ if (matchMedia("screen and (max-width: 767px)").matches) {
   }
   function forTouchEnd(event) {
     forEndX = event.changedTouches[0].pageX;
-    if(forStartX > forEndX){
+    if(forStartX > forEndX + 30){
       forSlide();
-    }else{
+    }else if(forStartX + 30 < forEndX){
       forSlide();
     }
   }
@@ -411,9 +413,9 @@ if (matchMedia("screen and (max-width: 767px)").matches) {
   }
   function aboutTouchEnd(event) {
     aboutEndX = event.changedTouches[0].pageX;
-    if(aboutStartX > aboutEndX){
+    if(aboutStartX > aboutEndX + 30){
       aboutNextSlide();
-    }else{
+    }else if(aboutStartX + 30 < aboutEndX){
       aboutPrevSlide();
     }
   }
@@ -430,9 +432,9 @@ if (matchMedia("screen and (max-width: 767px)").matches) {
   }
   function flavorTouchEnd(event) {
     flavorEndX = event.changedTouches[0].pageX;
-    if(flavorStartX > flavorEndX){
+    if(flavorStartX > flavorEndX + 30){
       flavorNextSlide();
-    }else{
+    }else if(flavorStartX + 30 < flavorEndX){
       flavorPrevSlide();
     }
   }

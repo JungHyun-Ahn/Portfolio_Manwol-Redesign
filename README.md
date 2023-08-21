@@ -13,3 +13,5 @@ https://junghyun-ahn.github.io/Portfolio_Manwol-Redesign/
 ## 사용 언어
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
+## 주요 기능
+* 사이트 내의 모든 슬라이드는 무한 루프 슬라이드로 만들어졌으며 모바일 환경에서는 드래그(drag)를 통해 슬라이트 넘기기가 가능합니다.
